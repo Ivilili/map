@@ -1,0 +1,171 @@
+[
+	{
+		"type": "Feature",
+		"properties": {
+			"NAME": "rajvosa"
+		},
+		"geometry": {
+			"coordinates": [ 18.421007, 43.858231 ],
+			"type": "Point"
+		},
+		"id": "016b451358a38bd672416ef3cdee5963"
+	},
+	{
+		"type": "Feature",
+		"properties": {
+			"NAME": "Metropolis Midtown"
+		},
+		"geometry": {
+			"coordinates": [ 18.425265, 43.859039 ],
+			"type": "Point"
+		},
+		"id": "09c67cd975963e366ad9d5a1c6f0fb16"
+	},
+	{
+		"type": "Feature",
+		"properties": {
+			"NAME": "Slatko Cose"
+		},
+		"geometry": {
+			"coordinates": [ 18.428199, 43.859295 ],
+			"type": "Point"
+		},
+		"id": "0a9ec3ce744d63c17a08a5eb525420a6"
+	},
+	{
+		"type": "Feature",
+		"properties": {
+			"NAME": "Marquee"
+		},
+		"geometry": {
+			"coordinates": [ 18.417976, 43.856623 ],
+			"type": "Point"
+		},
+		"id": "143e6b9414c7fa68921f8004e8453be3"
+	},
+	{
+		"type": "Feature",
+		"properties": {
+			"NAME": "Hippy Klupa"
+		},
+		"geometry": {
+			"coordinates": [ 18.41714, 43.859184 ],
+			"type": "Point"
+		},
+		"id": "29e611bb553963c7d4f42014544b2a65"
+	},
+
+	{
+		"type": "Feature",
+		"properties": {
+			"NAME": "Mash"
+		},
+		"geometry": {
+			"coordinates": [ 18.421568, 43.857511 ],
+			"type": "Point"
+		},
+		"id": "4f713c9173bbf7200822f2ad8f029e03"
+	},
+	{
+		"type": "Feature",
+		"properties": {
+			"NAME": "EspressoLab"
+		},
+		"geometry": {
+			"coordinates": [ 18.425342, 43.857956 ],
+			"type": "Point"
+		},
+		"id": "54ba228fbdfcf26087f1e8785f9db57c"
+	},
+
+	{
+		"type": "Feature",
+		"properties": {
+			"NAME": "Brasil"
+		},
+		"geometry": {
+			"coordinates": [ 18.42053, 43.859423 ],
+			"type": "Point"
+		},
+		"id": "5a4493ee1b915814c080f4350ca53709"
+	},
+	{
+		"type": "Feature",
+		"properties": {
+			"NAME": "SPAZIO"
+		},
+		"geometry": {
+			"coordinates": [ 18.417215, 43.857474 ],
+			"type": "Point"
+		},
+		"id": "6a1ee1bbfdb67875c00589153126faf6"
+	},
+
+	{
+		"type": "Feature",
+		"properties": {
+			"NAME": "Klub 1"
+		},
+		"geometry": {
+			"coordinates": [ 18.421139, 43.857593 ],
+			"type": "Point"
+		},
+		"id": "8f340ae1e1094e4a59699678365c1f48"
+	},
+
+	{
+		"type": "Feature",
+		"properties": {
+			"NAME": "Colors"
+		},
+		"geometry": {
+			"coordinates": [ 18.424283, 43.85885 ],
+			"type": "Point"
+		},
+		"id": "a00e8343e355c8cacc46142c8e2b850d"
+	},
+	{
+		"type": "Feature",
+		"properties": {
+			"NAME": "City Pub"
+		},
+		"geometry": {
+			"coordinates": [ 18.427266, 43.858123 ],
+			"type": "Point"
+		},
+		"id": "aca17fb427ca69d35e6ad3fe0a02e88c"
+	},
+	{
+		"type": "Feature",
+		"properties": {
+			"NAME": "Hacienda"
+		},
+		"geometry": {
+			"coordinates": [ 18.43007, 43.858395 ],
+			"type": "Point"
+		},
+		"id": "ad7f17a05e424592c4270b89e3eaa3f5"
+	},
+	{
+		"type": "Feature",
+		"properties": {
+			"NAME": "Vatra"
+		},
+		"geometry": {
+			"coordinates": [ 18.422266, 43.858594 ],
+			"type": "Point"
+		},
+		"id": "cc5f1a71c513e3164a24e5d385d11fbe"
+	},
+	{
+		"type": "Feature",
+		"properties": {
+			"NAME": "Dialog"
+		},
+		"geometry": {
+			"coordinates": [ 18.42354, 43.858492 ],
+			"type": "Point"
+		},
+		"id": "e156d2137933b8ec31476dd2ce74ad75"
+	}
+]
