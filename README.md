@@ -3,8 +3,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Clone Repo
 
-`
-`
+```
+git clone https://github.com/Ivilili/map.git
+cd map
+npm install
+```
 
 ## Development
 
