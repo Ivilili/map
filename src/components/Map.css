@@ -1,0 +1,13 @@
+.marker {
+	background-image: url("../assets/pin2.png");
+	background-size: 60%;
+	background-repeat: no-repeat;
+	width: 65px;
+	height: 65px;
+	transition: all 0.05s cubic-bezier(0.165, 0.84, 0.44, 1);
+	cursor: pointer;
+}
+.marker:hover {
+	height: 75px;
+	width: 75px;
+}

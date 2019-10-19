@@ -3,31 +3,22 @@ import React, { Component } from 'react';
 import './App.css';
 import Map from './components/Map';
 import ToggleBtn from './components/ToggleBtn';
+import Sidebar from './components/Sidebar';
 
 class App extends Component {
+	state = {
+		open: true
+	};
+	toggleMenu = () => {
+		this.setState((prevState) => ({
+			open: !prevState.open
+		}));
+	};
 	render() {
 		return (
 			<div className="App">
-				<ToggleBtn>
-					{({ open, toggleMenu }) => (
-						<div>
-							<button className="toggle-btn" onClick={toggleMenu}>
-								&#9776;
-							</button>
-							{open && (
-								<div className="sidebar">
-									<h3>Coffee Shops</h3>
-									<input
-										type="text"
-										value={this.props.search}
-										onChange={this.handleChange}
-										placeholder="Search for coffee shop"
-									/>
-								</div>
-							)}
-						</div>
-					)}
-				</ToggleBtn>
+				<ToggleBtn component={ToggleBtn} open={this.state.open} toggleMenu={this.toggleMenu} />
+				<Sidebar component={Sidebar} open={this.state.open} />
 
 				<Map component={Map} />
 			</div>

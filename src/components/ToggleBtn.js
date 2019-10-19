@@ -1,25 +1,13 @@
-import { Component } from 'react';
+import React from 'react';
 
 import './Sidebar.css';
 
-class ToggleBtn extends Component {
-	state = {
-		open: false
-	};
-
-	toggleMenu = () => {
-		this.setState((prevState) => ({
-			open: !prevState.open
-		}));
-	};
-
-	render() {
-		const { children } = this.props;
-		return children({
-			open: this.state.open,
-			toggleMenu: this.toggleMenu
-		});
-	}
-}
+const ToggleBtn = (props) => {
+	return (
+		<button className="toggle-btn" onClick={props.toggleMenu}>
+			&#9776;
+		</button>
+	);
+};
 
 export default ToggleBtn;
