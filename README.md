@@ -1,4 +1,4 @@
-# Chingu Voyage Pre-work Project (Tier 2): Mapbox API App
+# Mapbox API App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Clone Repo
