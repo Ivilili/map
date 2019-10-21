@@ -16,7 +16,7 @@
 	overflow: hidden;
 	transition: 0.5s;
 }
-input[type=search] {
+input[type=text] {
 	height: 2em;
 	width: 90%;
 	border: 1px solid rgb(196, 193, 193);

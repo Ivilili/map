@@ -8,8 +8,13 @@ class Sidebar extends Component {
 			<div>
 				{this.props.open && (
 					<form className="sidebar">
-						<h3>Coffee Shops</h3>
-						<input type="search" placeholder="Search for coffee shop" />
+						<h1>Coffee Shops</h1>
+						<input
+							type="text"
+							value={this.props.search}
+							onChange={this.updateSearch}
+							placeholder="Search for coffee shop"
+						/>
 					</form>
 				)}
 			</div>

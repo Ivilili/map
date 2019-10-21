@@ -2,7 +2,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"NAME": "rajvosa"
+			"title": "rajvosa"
 		},
 		"geometry": {
 			"coordinates": [ 18.421007, 43.858231 ],
@@ -13,7 +13,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"NAME": "Metropolis Midtown"
+			"title": "Metropolis Midtown"
 		},
 		"geometry": {
 			"coordinates": [ 18.425265, 43.859039 ],
@@ -24,7 +24,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"NAME": "Slatko Cose"
+			"title": "Slatko Cose"
 		},
 		"geometry": {
 			"coordinates": [ 18.428199, 43.859295 ],
@@ -35,7 +35,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"NAME": "Marquee"
+			"title": "Marquee"
 		},
 		"geometry": {
 			"coordinates": [ 18.417976, 43.856623 ],
@@ -46,7 +46,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"NAME": "Hippy Klupa"
+			"title": "Hippy Klupa"
 		},
 		"geometry": {
 			"coordinates": [ 18.41714, 43.859184 ],
@@ -58,7 +58,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"NAME": "Mash"
+			"title": "Mash"
 		},
 		"geometry": {
 			"coordinates": [ 18.421568, 43.857511 ],
@@ -69,7 +69,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"NAME": "EspressoLab"
+			"title": "EspressoLab"
 		},
 		"geometry": {
 			"coordinates": [ 18.425342, 43.857956 ],
@@ -81,7 +81,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"NAME": "Brasil"
+			"title": "Brasil"
 		},
 		"geometry": {
 			"coordinates": [ 18.42053, 43.859423 ],
@@ -92,7 +92,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"NAME": "SPAZIO"
+			"title": "SPAZIO"
 		},
 		"geometry": {
 			"coordinates": [ 18.417215, 43.857474 ],
@@ -104,7 +104,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"NAME": "Klub 1"
+			"title": "Klub 1"
 		},
 		"geometry": {
 			"coordinates": [ 18.421139, 43.857593 ],
@@ -116,7 +116,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"NAME": "Colors"
+			"title": "Colors"
 		},
 		"geometry": {
 			"coordinates": [ 18.424283, 43.85885 ],
@@ -127,7 +127,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"NAME": "City Pub"
+			"title": "City Pub"
 		},
 		"geometry": {
 			"coordinates": [ 18.427266, 43.858123 ],
@@ -138,7 +138,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"NAME": "Hacienda"
+			"title": "Hacienda"
 		},
 		"geometry": {
 			"coordinates": [ 18.43007, 43.858395 ],
@@ -149,7 +149,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"NAME": "Vatra"
+			"title": "Vatra"
 		},
 		"geometry": {
 			"coordinates": [ 18.422266, 43.858594 ],
@@ -160,7 +160,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"NAME": "Dialog"
+			"title": "Dialog"
 		},
 		"geometry": {
 			"coordinates": [ 18.42354, 43.858492 ],

@@ -16,12 +16,10 @@ class Map extends Component {
 			zoom: 16,
 			pitch: 80,
 			bearing: -17.6
-		},
-		search: ''
+		}
 	};
 
 	render() {
-		console.log(coffeePoints);
 		return (
 			<ReactMapGL
 				{...this.state.viewport}
