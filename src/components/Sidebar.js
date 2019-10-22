@@ -11,8 +11,9 @@ class Sidebar extends Component {
 						<h1>Coffee Shops</h1>
 						<input
 							type="text"
+							name="search"
 							value={this.props.search}
-							onChange={this.updateSearch}
+							onChange={this.props.updateSearch}
 							placeholder="Search for coffee shop"
 						/>
 					</form>
