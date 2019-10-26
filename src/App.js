@@ -1,37 +1,27 @@
 import React, { Component } from 'react';
+import coffeePoints from './data/features.json';
 
-import './App.css';
 import Map from './components/Map';
 import ToggleBtn from './components/ToggleBtn';
 import Sidebar from './components/Sidebar';
-import coffeePoints from './data/features.json';
-
+import './components/Sidebar.css';
+import FilteredList from './components/Filter';
 class App extends Component {
 	state = {
 		open: true,
 		locations: coffeePoints,
 		filteredLocations: [],
-		search: '',
-		filteredList: []
+		search: ''
 	};
-	filterList = () => {
-		this.setState((prevState) => {
-			return {
-				filteredList: prevState.locations
-					.filter((value) => value.properties.title.toLowerCase().startsWith(prevState.search))
-					.map((value) => value.properties.title)
-			};
-		});
-	};
-	filterLocations = () => {
-		this.setState((prevState) => {
-			return {
-				filteredLocations: prevState.locations.filter((location) =>
-					prevState.filteredList.includes(location.properties.title)
-				)
-			};
-		});
-	};
+
+	//filterLocations = () => {
+	//	const { selectedPoint } = this.props;
+	//	const { filteredLocations, locations } = this.state;
+
+	//	this.setState({
+	//		filteredLocations: locations.filter((location) => selectedPoint.includes//(location.properties.title))
+	//	});
+	//};
 
 	toggleMenu = () => {
 		this.setState((prevState) => ({
@@ -43,31 +33,29 @@ class App extends Component {
 		this.setState({
 			[name]: value
 		});
-		this.filterList();
-		this.filterLocations();
+
+		//	this.filterLocations();
 	};
 
 	render() {
 		const { open, search, locations } = this.state;
 
-		const completedList = locations.map((value, index) => <li key={index}>{value.properties.title}</li>);
-		console.log(completedList);
 		return (
 			<div className="App">
 				<ToggleBtn component={ToggleBtn} open={open} toggleMenu={this.toggleMenu} />
-				<Sidebar component={Sidebar} open={open} onChange={this.updateSearch} value={search}>
-					<div className="filter filter-list">
-						<div className="tip">Use the input field to search a location</div>
-						<ul>{completedList}</ul>
-					</div>
+				<Sidebar component={Sidebar} open={open} locations={locations}>
+					<input
+						type="text"
+						name="search"
+						value={this.state.search}
+						search={search}
+						onChange={this.updateSearch}
+						placeholder="Search for coffee shop"
+					/>
+					<FilteredList locations={locations} search={search} />
 				</Sidebar>
 
-				<Map
-					component={Map}
-					locations={
-						this.state.filteredLocations.length > 0 ? this.state.filteredLocations : this.state.locations
-					}
-				/>
+				<Map component={Map} locations={locations} />
 			</div>
 		);
 	}

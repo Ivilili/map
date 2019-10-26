@@ -2,7 +2,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"title": "rajvosa"
+			"title": "Rajvosa"
 		},
 		"geometry": {
 			"coordinates": [ 18.421007, 43.858231 ],
@@ -92,7 +92,7 @@
 	{
 		"type": "Feature",
 		"properties": {
-			"title": "SPAZIO"
+			"title": "Spazio"
 		},
 		"geometry": {
 			"coordinates": [ 18.417215, 43.857474 ],

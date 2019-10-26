@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactMapGL, { Marker } from 'react-map-gl';
+import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import coffeePoints from '../data/features.json';
 
 import './Map.css';
@@ -11,15 +11,17 @@ class Map extends Component {
 		viewport: {
 			width: '100vw',
 			height: '100vh',
-			latitude: 43.8562586,
-			longitude: 18.4130763,
+			latitude: 43.85555,
+			longitude: 18.42,
 			zoom: 16,
 			pitch: 80,
 			bearing: -17.6
-		}
+		},
+		selectedPoint: null
 	};
 
 	render() {
+		const { selectedPoint } = this.state;
 		return (
 			<ReactMapGL
 				{...this.state.viewport}
@@ -27,11 +29,36 @@ class Map extends Component {
 				mapboxApiAccessToken={TOKEN}
 				onViewportChange={(viewport) => this.setState({ viewport })}
 			>
-				{coffeePoints.map((e) => (
-					<Marker key={e.id} latitude={e.geometry.coordinates[1]} longitude={e.geometry.coordinates[0]}>
-						<div className="marker" />
+				{coffeePoints.map((point) => (
+					<Marker
+						key={point.id}
+						latitude={point.geometry.coordinates[1]}
+						longitude={point.geometry.coordinates[0]}
+					>
+						<div
+							className="marker"
+							onClick={(e) => {
+								e.preventDefault();
+								this.setState({ selectedPoint: point });
+							}}
+						/>
 					</Marker>
 				))}
+				{selectedPoint ? (
+					<Popup
+						latitude={selectedPoint.geometry.coordinates[1]}
+						longitude={selectedPoint.geometry.coordinates[0]}
+						onClose={() => {
+							this.setState({
+								selectedPoint: null
+							});
+						}}
+					>
+						<div>
+							<h2>{selectedPoint.properties.title}</h2>
+						</div>
+					</Popup>
+				) : null}
 			</ReactMapGL>
 		);
 	}
