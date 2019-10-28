@@ -1,5 +1,9 @@
 # Mapbox API App
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+A map of coffee shops in the center part of Sarajevo, using React and Mapbox API. 
+Live: [Map](https://chingumap.netlify.com)
+
+[![Screen-Shot-2019-10-28-at-10-25-31-PM.png](https://i.postimg.cc/8cczjmZZ/Screen-Shot-2019-10-28-at-10-25-31-PM.png)](https://postimg.cc/K3X2WBST)
 
 ## Clone Repo
 
