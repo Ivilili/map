@@ -10,18 +10,9 @@ class App extends Component {
 	state = {
 		open: true,
 		locations: coffeePoints,
-		filteredLocations: [],
+		filteredList: [],
 		search: ''
 	};
-
-	//filterLocations = () => {
-	//	const { selectedPoint } = this.props;
-	//	const { filteredLocations, locations } = this.state;
-
-	//	this.setState({
-	//		filteredLocations: locations.filter((location) => selectedPoint.includes//(location.properties.title))
-	//	});
-	//};
 
 	toggleMenu = () => {
 		this.setState((prevState) => ({
@@ -33,12 +24,11 @@ class App extends Component {
 		this.setState({
 			[name]: value
 		});
-
-		//	this.filterLocations();
 	};
 
 	render() {
 		const { open, search, locations } = this.state;
+		console.log(this.props.selectedPoint);
 
 		return (
 			<div className="App">

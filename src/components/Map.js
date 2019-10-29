@@ -13,15 +13,46 @@ class Map extends Component {
 			height: '100vh',
 			latitude: 43.85555,
 			longitude: 18.42,
-			zoom: 16,
+			zoom: 14,
 			pitch: 80,
 			bearing: -17.6
 		},
 		selectedPoint: null
 	};
 
-	render() {
+	markerRender = () => {
+		return coffeePoints.map((point) => (
+			<Marker key={point.id} latitude={point.geometry.coordinates[1]} longitude={point.geometry.coordinates[0]}>
+				<div
+					className="marker"
+					onClick={(e) => {
+						e.preventDefault();
+						this.setState({ selectedPoint: point });
+					}}
+				/>
+			</Marker>
+		));
+	};
+	showPopup = () => {
 		const { selectedPoint } = this.state;
+		return selectedPoint ? (
+			<Popup
+				latitude={selectedPoint.geometry.coordinates[1]}
+				longitude={selectedPoint.geometry.coordinates[0]}
+				onClose={() => {
+					this.setState({
+						selectedPoint: null
+					});
+				}}
+			>
+				<div>
+					<h2>{selectedPoint.properties.title}</h2>
+				</div>
+			</Popup>
+		) : null;
+	};
+
+	render() {
 		return (
 			<ReactMapGL
 				{...this.state.viewport}
@@ -29,36 +60,8 @@ class Map extends Component {
 				mapboxApiAccessToken={TOKEN}
 				onViewportChange={(viewport) => this.setState({ viewport })}
 			>
-				{coffeePoints.map((point) => (
-					<Marker
-						key={point.id}
-						latitude={point.geometry.coordinates[1]}
-						longitude={point.geometry.coordinates[0]}
-					>
-						<div
-							className="marker"
-							onClick={(e) => {
-								e.preventDefault();
-								this.setState({ selectedPoint: point });
-							}}
-						/>
-					</Marker>
-				))}
-				{selectedPoint ? (
-					<Popup
-						latitude={selectedPoint.geometry.coordinates[1]}
-						longitude={selectedPoint.geometry.coordinates[0]}
-						onClose={() => {
-							this.setState({
-								selectedPoint: null
-							});
-						}}
-					>
-						<div>
-							<h2>{selectedPoint.properties.title}</h2>
-						</div>
-					</Popup>
-				) : null}
+				{this.markerRender()}
+				{this.showPopup()}
 			</ReactMapGL>
 		);
 	}
