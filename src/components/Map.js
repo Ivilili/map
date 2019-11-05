@@ -13,7 +13,7 @@ class Map extends Component {
 			height: '100vh',
 			latitude: 43.85555,
 			longitude: 18.42,
-			zoom: 14,
+			zoom: 15,
 			pitch: 80,
 			bearing: -17.6
 		},

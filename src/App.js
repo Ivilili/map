@@ -6,6 +6,7 @@ import ToggleBtn from './components/ToggleBtn';
 import Sidebar from './components/Sidebar';
 import './components/Sidebar.css';
 import FilteredList from './components/Filter';
+import './App.css';
 class App extends Component {
 	state = {
 		open: true,
@@ -40,7 +41,7 @@ class App extends Component {
 						value={this.state.search}
 						search={search}
 						onChange={this.updateSearch}
-						placeholder="Search for coffee shop"
+						placeholder="Search for a coffee shop"
 					/>
 					<FilteredList locations={locations} search={search} />
 				</Sidebar>
