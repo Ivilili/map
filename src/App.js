@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import coffeePoints from './data/features.json';
+import { Marker, Popup } from 'react-map-gl';
 
 import Map from './components/Map';
 import ToggleBtn from './components/ToggleBtn';
@@ -12,7 +13,39 @@ class App extends Component {
 		open: true,
 		locations: coffeePoints,
 		filteredList: [],
-		search: ''
+		search: '',
+		selectedPoint: null
+	};
+	markerRender = () => {
+		return coffeePoints.map((point) => (
+			<Marker key={point.id} latitude={point.geometry.coordinates[1]} longitude={point.geometry.coordinates[0]}>
+				<div
+					className="marker"
+					onClick={(e) => {
+						e.preventDefault();
+						this.setState({ selectedPoint: point });
+					}}
+				/>
+			</Marker>
+		));
+	};
+	showPopup = () => {
+		const { selectedPoint } = this.state;
+		return selectedPoint ? (
+			<Popup
+				latitude={selectedPoint.geometry.coordinates[1]}
+				longitude={selectedPoint.geometry.coordinates[0]}
+				onClose={() => {
+					this.setState({
+						selectedPoint: null
+					});
+				}}
+			>
+				<div>
+					<h2>{selectedPoint.properties.title}</h2>
+				</div>
+			</Popup>
+		) : null;
 	};
 
 	toggleMenu = () => {
@@ -29,7 +62,7 @@ class App extends Component {
 
 	render() {
 		const { open, search, locations } = this.state;
-		console.log(this.props.selectedPoint);
+		console.log(this.state.selectedPoint);
 
 		return (
 			<div className="App">
@@ -43,10 +76,20 @@ class App extends Component {
 						onChange={this.updateSearch}
 						placeholder="Search for a coffee shop"
 					/>
-					<FilteredList locations={locations} search={search} />
+					<FilteredList
+						locations={locations}
+						search={search}
+						showPopup={this.showPopup()}
+						markerRender={this.markerRender()}
+					/>
 				</Sidebar>
 
-				<Map component={Map} locations={locations} />
+				<Map
+					component={Map}
+					locations={locations}
+					showPopup={this.showPopup()}
+					markerRender={this.markerRender()}
+				/>
 			</div>
 		);
 	}

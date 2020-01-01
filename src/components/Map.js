@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import ReactMapGL, { Marker, Popup } from 'react-map-gl';
-import coffeePoints from '../data/features.json';
+import ReactMapGL from 'react-map-gl';
 
 import './Map.css';
 
@@ -16,40 +15,7 @@ class Map extends Component {
 			zoom: 15,
 			pitch: 80,
 			bearing: -17.6
-		},
-		selectedPoint: null
-	};
-
-	markerRender = () => {
-		return coffeePoints.map((point) => (
-			<Marker key={point.id} latitude={point.geometry.coordinates[1]} longitude={point.geometry.coordinates[0]}>
-				<div
-					className="marker"
-					onClick={(e) => {
-						e.preventDefault();
-						this.setState({ selectedPoint: point });
-					}}
-				/>
-			</Marker>
-		));
-	};
-	showPopup = () => {
-		const { selectedPoint } = this.state;
-		return selectedPoint ? (
-			<Popup
-				latitude={selectedPoint.geometry.coordinates[1]}
-				longitude={selectedPoint.geometry.coordinates[0]}
-				onClose={() => {
-					this.setState({
-						selectedPoint: null
-					});
-				}}
-			>
-				<div>
-					<h2>{selectedPoint.properties.title}</h2>
-				</div>
-			</Popup>
-		) : null;
+		}
 	};
 
 	render() {
@@ -60,8 +26,8 @@ class Map extends Component {
 				mapboxApiAccessToken={TOKEN}
 				onViewportChange={(viewport) => this.setState({ viewport })}
 			>
-				{this.markerRender()}
-				{this.showPopup()}
+				{this.props.markerRender}
+				{this.props.showPopup}
 			</ReactMapGL>
 		);
 	}
